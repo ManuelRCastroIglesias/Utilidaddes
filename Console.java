@@ -40,7 +40,7 @@ public class Console {
 	
 		//#endregion Utils
 
-		//#region console.read
+		//#region console_read
 
 			/** Error message reading fractional number format, output in spanish */
 			private void writeError(String formato) {
@@ -178,7 +178,7 @@ public class Console {
 				return input;
 			}
 
-		//#endregion console.read
+		//#endregion console_read
 
 		//#region console_write
 
