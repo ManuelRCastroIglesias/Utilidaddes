@@ -3,6 +3,7 @@ package es.usantatecla.utils;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+/** En Visual Studio Code                                                   */
 /** Para desplegar todo usar:     ctrl+k ctrl+j                             */
 /** Para plegar todo usar:        ctrl+k ctrl+0 (el de arriba de las letras)*/
 /** Para plegar regiones usar:    ctrl+k ctrl+8 (el de arriba de las letras)*/
