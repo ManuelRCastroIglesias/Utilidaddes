@@ -225,20 +225,6 @@ public class Console {
   // #endregion Tipos numéricos
 
   // #region Tipos de fecha y hora
-  public LocalDate readLocalDate(String title) {
-    LocalDate input = null;
-    boolean ok = false;
-    do {
-      try {
-        input = LocalDate.parse(this.readString(title));
-        ok = true;
-      } catch (Exception e) {
-        this.writeError("fecha");
-      }
-    } while (!ok);
-    return input;
-  }
-
   public LocalDate readDate(String title) {
     LocalDate inputFecha = null;
     boolean ok = false;
@@ -251,20 +237,6 @@ public class Console {
       }
     } while (!ok);
     return inputFecha;
-  }
-
-  public LocalDateTime readLocalDateTime(String title) {
-    LocalDateTime input = null;
-    boolean ok = false;
-    do {
-      try {
-        input = LocalDateTime.parse(this.readString(title));
-        ok = true;
-      } catch (Exception e) {
-        this.writeError("fecha y hora");
-      }
-    } while (!ok);
-    return input;
   }
 
   public LocalDateTime readDateTime(String title) {
@@ -281,20 +253,6 @@ public class Console {
     return inputFechaHora;
   }
 
-  public LocalTime readLocalTime(String title) {
-    LocalTime input = null;
-    boolean ok = false;
-    do {
-      try {
-        input = LocalTime.parse(this.readString(title));
-        ok = true;
-      } catch (Exception e) {
-        this.writeError("hora");
-      }
-    } while (!ok);
-    return input;
-  }
-
   public LocalTime readTime(String title) {
     LocalTime inputHora = null;
     boolean ok = false;
@@ -307,6 +265,48 @@ public class Console {
       }
     } while (!ok);
     return inputHora;
+  }
+
+  public LocalDate readLocalDate(String title) {
+    LocalDate input = null;
+    boolean ok = false;
+    do {
+      try {
+        input = LocalDate.parse(this.readString(title));
+        ok = true;
+      } catch (Exception e) {
+        this.writeError("fecha");
+      }
+    } while (!ok);
+    return input;
+  }
+
+  public LocalDateTime readLocalDateTime(String title) {
+    LocalDateTime input = null;
+    boolean ok = false;
+    do {
+      try {
+        input = LocalDateTime.parse(this.readString(title));
+        ok = true;
+      } catch (Exception e) {
+        this.writeError("fecha y hora");
+      }
+    } while (!ok);
+    return input;
+  }
+
+  public LocalTime readLocalTime(String title) {
+    LocalTime input = null;
+    boolean ok = false;
+    do {
+      try {
+        input = LocalTime.parse(this.readString(title));
+        ok = true;
+      } catch (Exception e) {
+        this.writeError("hora");
+      }
+    } while (!ok);
+    return input;
   }
 
   public Duration readDuration(String title) {
